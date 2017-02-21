@@ -1,0 +1,29 @@
+//    class Graph{
+//        int val;
+//        List<Graph> neighbors = new ArrayList();
+//        public Graph(int val){
+//            this.val = val;
+//        }
+//    }
+//
+//    public Graph clone(Graph node){
+//        if(node == null){
+//            return null;
+//        }
+//        Map<Integer, Graph> container = new HashMap<>();
+//        Graph newNode = new Graph(node.val);
+//        Queue<Graph> q = new LinkedList();
+//        q.add(node);
+//        while(!q.isEmpty()){
+//            Graph temp = q.remove();
+//            for(Graph g : temp.neighbors){
+//                if(!container.containsKey(g.val)){
+//                    container.put(g.val, new Graph(g.val));
+//                    q.add(g);
+//                }
+//                container.get(temp.val).neighbors.add(g.val, container.get(g.val));
+//            }
+//        }
+//        return newNode;
+//    }
+//    {0,1,2#1,2#2,2}
